@@ -5,6 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      'browndark' : '#6f5f52',
+      'browngrey' : '#887d77',
+      'brownlight' : '#a29b9c',
+      'greydark' : '#bcbac2',
+      'greylight' : '#fefbf6'
+    },
   },
   plugins: [],
 }
