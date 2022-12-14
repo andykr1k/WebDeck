@@ -10,8 +10,11 @@ module.exports = {
       'browngrey' : '#887d77',
       'brownlight' : '#a29b9c',
       'greydark' : '#bcbac2',
-      'greylight' : '#fefbf6'
+      'greylight' : '#fefbf6',
+      'lblue' : '#C0E0DE',
+      'greenblue' : '#1E91D6',
+      'raisin' : '#2E2C2F'
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 }
