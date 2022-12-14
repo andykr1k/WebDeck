@@ -55,8 +55,8 @@
 		background-color: #2E2C2F;
 		border-radius: 50%;
 		opacity: 1;
-		animation: wheel 2s infinite;
-		-webkit-animation: wheel 2s infinite;
+		animation: wheel 3s infinite;
+		-webkit-animation: wheel 3s infinite;
 	}
 	
 	@keyframes wheel {
