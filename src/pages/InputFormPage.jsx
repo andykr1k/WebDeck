@@ -22,9 +22,9 @@ export default function InputFormPage() {
         <Tabs isFitted variant='soft-rounded' colorScheme='green'>
         <div className='absolute top-0 left-0 right-0 z-10'>
         <TabList m='1em'>
-            <Tab>Basic Information</Tab>
+            <Tab>Basic</Tab>
             <Tab>Education</Tab>
-            <Tab>Work Experience</Tab>
+            <Tab>Work</Tab>
             <Tab>Socials</Tab>
         </TabList>
         </div>
