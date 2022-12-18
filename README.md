@@ -16,5 +16,14 @@
 
 ## Screenshots
 
-## Installation/Usage
-1) 
+## Usage
+1) Visit webdecks.netlify.app
+2) Scroll to get started button and begin
+3) Fill in information correctly
+4) Click green forward arrow when on last tab
+5) Zip folder will be downloaded onto local computer
+6) Unzip and place folders onto desktop
+7) Click into the first design folder
+8) Double click on the html file and a browser should appear
+9) Congrats! You have generated and visited your very own portfolio website
+10) Repeat steps 7->9 to open other designs within their respective folders
