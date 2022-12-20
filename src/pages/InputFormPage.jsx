@@ -45,7 +45,7 @@ export default function InputFormPage() {
                         >
                         <div className="max-w-xl lg:max-w-3xl">
 
-                            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                            <form action="#" className="grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-3">
                                 <label
                                 for="FirstName"
@@ -59,7 +59,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
 
@@ -76,7 +76,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="LastName"
                                 name="last_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
 
@@ -90,7 +90,7 @@ export default function InputFormPage() {
                                 type="email"
                                 id="Email"
                                 name="email"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             </form>
@@ -106,7 +106,7 @@ export default function InputFormPage() {
                         >
                         <div className="max-w-xl lg:max-w-3xl">
 
-                            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                            <form action="#" className="grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-6">
                                 <label
                                 for="FirstName"
@@ -120,7 +120,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             <div className="col-span-6 sm:col-span-6">
@@ -136,7 +136,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             <div className="col-span-6 sm:col-span-6">
@@ -152,7 +152,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             </form>
@@ -168,7 +168,7 @@ export default function InputFormPage() {
                         >
                         <div className="max-w-xl lg:max-w-3xl">
 
-                            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                            <form action="#" className="grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-6">
                                 <label
                                 for="FirstName"
@@ -182,7 +182,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             <div className="col-span-6 sm:col-span-6">
@@ -198,7 +198,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             <div className="col-span-6 sm:col-span-6">
@@ -214,7 +214,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             </form>
@@ -223,13 +223,13 @@ export default function InputFormPage() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="fixed bottom-0 right-0 p-10">
+                <div className="fixed bottom-0 align-middle right-0 p-10">
                                 <motion.button
                                 onClick={() => (generateWebsites(Fname, Lname, email))}
                                 whileHover={{scale:1.2}} 
-                                className='bg-lblue p-4 rounded-md'
+                                className='bg-lblue p-4 font-bold rounded-md'
                                 >
-                                <ArrowForwardIcon color='green.600' />
+                                Generate
                                 </motion.button>
                             </div>
                 <div className="lg:grid lg:grid-cols-6">
@@ -239,7 +239,7 @@ export default function InputFormPage() {
                         >
                         <div className="max-w-xl lg:max-w-3xl">
 
-                            <form action="#" className="mt-8 grid grid-cols-6 gap-6">
+                            <form action="#" className="grid grid-cols-6 gap-6">
                             <div className="col-span-6 sm:col-span-6">
                                 <label
                                 for="FirstName"
@@ -253,7 +253,7 @@ export default function InputFormPage() {
                                 type="text"
                                 id="FirstName"
                                 name="first_name"
-                                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
                             </div>
                             </form>

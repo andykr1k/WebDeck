@@ -19,12 +19,10 @@ export function generateWebsites(firstname, lastname, email) {
     csslink.href = './designs/first.css';
     scriptlink.href = './scripts/FirstScript.js';
 
-    // Add file name
     weblink.download = "website.html";
     csslink.download = "first.css";
     scriptlink.download = "firstscript.js"
 
-    // Add click event to <a> tag to save file.
     weblink.click();
     csslink.click();
     scriptlink.click();
@@ -33,9 +31,18 @@ export function generateWebsites(firstname, lastname, email) {
     URL.revokeObjectURL(weblink.href);
 
     var zip = new JSZip();
-    var webFolder = zip.folder("Website");
-    webFolder.file('./designs/first.css');
-    webFolder.file('./scripts/FirstScript.js');
+    const name = 'first.css'
+    fetch('./public/designs/' + name)
+      .then(res => res.arrayBuffer())
+      .then(ab => {
+        zip.file(name, ab);
+      })
+      const name2 = 'FirstScript.js'
+      fetch('./public/scripts/' + name2)
+        .then(res => res.arrayBuffer())
+        .then(ab => {
+          zip.file(name2, ab);
+        })
     zip.generateAsync({type:"blob"})
     .then(function(content) {
         saveAs(content, "website.zip");
