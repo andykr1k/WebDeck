@@ -1,3 +1,6 @@
+import JSZip from "jszip";
+import { saveAs } from 'file-saver';
+
 export function generateWebsites(firstname, lastname, email) {
   // if (firstname == "" || lastname == "") {
   //   throw 'There is a value missing!';
@@ -29,31 +32,14 @@ export function generateWebsites(firstname, lastname, email) {
     URL.revokeObjectURL(scriptlink.href);
     URL.revokeObjectURL(weblink.href);
 
-    // var count = 0;
-    // var zipFilename = "zipFilename.zip";
-    // var urls = [
-    //   weblink.href,
-    //   csslink.href
-    // ];
-    // var zip = new JSZip();
-    // urls.forEach(function(url) {
-    //   JSZipUtils.getBinaryContent(url, function(err, data) {
-    //   if (err) {
-    //     throw err;
-    //   }
-    //   zip.file(url, data, {
-    //     binary: true
-    //   });
-    //   count++;
-    //   if (count == urls.length) {
-    //     zip.generateAsync({
-    //       type: 'blob'
-    //     }).then(function(content) {
-    //       saveAs(content, "website.zip");
-    //     });
-    //   }
-    //   });
-    // });
+    var zip = new JSZip();
+    var webFolder = zip.folder("Website");
+    webFolder.file('./designs/first.css');
+    webFolder.file('./scripts/FirstScript.js');
+    zip.generateAsync({type:"blob"})
+    .then(function(content) {
+        saveAs(content, "website.zip");
+    });
     return true;
   }
   //module.exports = generateWebsites;
