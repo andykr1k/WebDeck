@@ -37,39 +37,40 @@
 
 @media only screen and (max-width: 700px) {
 	.mouse {
-		width: 24px;
-		height: 36px;
-		border: 3px solid #2E2C2F;
+		width: 0px;
+		height: 0px;
+		border: 0px solid #2E2C2F;
 		border-radius: 60px;
 		position: relative;
 	}
 	
 	.mouse::before {
 		content: '';
-		width: 6px;
-		height: 6px;
+		width: 20px;
+		height: 20px;
 		position: absolute;
-		top: 3px;
+		top: 300px;
 		left: 50%;
 		transform: translateX(-50%);
-		background-color: #2E2C2F;
+		background-color: #2e2c2f68;
+		border: 2px solid #2E2C2F;
 		border-radius: 50%;
 		opacity: 1;
-		animation: wheel 3s infinite;
-		-webkit-animation: wheel 3s infinite;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2s infinite;
 	}
 	
 	@keyframes wheel {
 		to {
 			opacity: 0;
-			top: 16px;
+			top: 0px;
 		}
 	}
 	
 	@-webkit-keyframes wheel {
 		to {
 			opacity: 0;
-			top: 16px;
+			top: 0px;
 		}
 	}
   }
