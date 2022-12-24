@@ -140,7 +140,7 @@ export default function Footer() {
                 </ul>
 
                 <p class="mx-auto mt-12 max-w-md align-middle text-center justify-center flex items-center text-lblue">
-                Made with &nbsp; <AiFillHeart /> &nbsp; using &nbsp; <FaReact /> &nbsp;  <SiTailwindcss />&nbsp; <SiChakraui /> &nbsp;  by Andrew Krikorian
+                Made with &nbsp; <AiFillHeart /> &nbsp; using &nbsp; <FaReact /> &nbsp;  <SiTailwindcss /> &nbsp; <SiChakraui /> &nbsp; by &nbsp; <a href="https://www.github.com/andykr1k" className="underline"> Andrew Krikorian </a>
                 </p>
             </div>
         </footer>

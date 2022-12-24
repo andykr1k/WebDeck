@@ -1,4 +1,4 @@
-import { CoverPage, CTAPage, InputFormPage } from './pages/index'
+import { CoverPage, CTAPage, InputFormPage, NotFoundPage } from './pages/index'
 import { Footer, StatBubble } from './components'
 import { Routes, Route } from "react-router-dom"
 function App() {
@@ -8,18 +8,19 @@ function App() {
       <Routes>
         <Route path="/" element={
           <>
-            <div className='snap-start shrink-0'>
+            <div className='snap-start snap-always shrink-0'>
               <CoverPage />
             </div>
-            <div className='snap-start shrink-0'>
+            <div className='snap-start snap-always	shrink-0'>
               <CTAPage />
             </div>
-            <div className='snap-end shrink-0'>
+            <div className='snap-end snap-always shrink-0'>
               <Footer />
             </div> 
           </>
            } />
         <Route path="get-started" element={ <InputFormPage/> } />
+        <Route path='*' element={<NotFoundPage />}/>
       </Routes>
     </div>
   )
