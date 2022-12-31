@@ -5,8 +5,7 @@ import { SiTailwindcss, SiChakraui } from "react-icons/si";
 export default function Footer() {
     return (
         <footer aria-label="Site Footer" class="bg-raisin">
-            <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-
+            <div class="mx-auto w-100vw px-4 py-16 sm:px-6 lg:px-8">
                 <nav aria-label="Footer Nav" class="mt-12">
                     <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
                         <li>

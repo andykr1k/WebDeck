@@ -2,7 +2,7 @@
 export default function CTAPage() {
 
   return (
-    <div className='grid place-items-center min-h-screen bg-raisin'>
+    <div className='grid place-items-center h-screen w-screen bg-raisin'>
     <section class="text-white">
       <div
         class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"

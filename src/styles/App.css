@@ -1,7 +1,7 @@
 .mouse {
 	width: 32px;
 	height: 48px;
-	border: 3px solid #2E2C2F;
+	border: 3px solid #C0E0DE;
 	border-radius: 60px;
 	position: relative;
 }
@@ -14,7 +14,7 @@
     top: 4px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #2E2C2F;
+    background-color: #C0E0DE;
     border-radius: 50%;
     opacity: 1;
     animation: wheel 2s infinite;
@@ -39,7 +39,7 @@
 	.mouse {
 		width: 0px;
 		height: 0px;
-		border: 0px solid #2E2C2F;
+		border: 0px solid #C0E0DE;
 		border-radius: 60px;
 		position: relative;
 	}
@@ -52,8 +52,8 @@
 		top: 300px;
 		left: 50%;
 		transform: translateX(-50%);
-		background-color: #2e2c2f68;
-		border: 2px solid #2E2C2F;
+		background-color: #C0E0DE;
+		border: 2px solid #C0E0DE;
 		border-radius: 50%;
 		opacity: 1;
 		animation: wheel 2s infinite;

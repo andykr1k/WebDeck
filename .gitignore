@@ -35,3 +35,24 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# extra
+*.o
+*.x
+.vscode
+CMakeCache.txt
+cmake_install.cmake
+lib
+bin
+CMakeFiles
+Makefile
+build
+output
+Generate
+User_Tests
+SocialDescription_Tests
+tester
+WorkDescription_Tests
+EducationDescription_Tests
+ReferenceDescription_Tests
+Tests
