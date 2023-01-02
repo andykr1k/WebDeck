@@ -1,7 +1,7 @@
 import JSZip from "jszip";
 import { saveAs } from 'file-saver';
-
 export function generateWebsites(firstname, lastname, email) {
+
   // if (firstname == "" || lastname == "") {
   //   throw 'There is a value missing!';
   // }
@@ -15,38 +15,33 @@ export function generateWebsites(firstname, lastname, email) {
 
     //const cssfile = new Blob('./designs/FirstDesign.css', { type: 'text/plain' });
     // Add file content in the object URL
-    weblink.href = URL.createObjectURL(webfile);
-    csslink.href = './designs/first.css';
-    scriptlink.href = './scripts/FirstScript.js';
+    // weblink.href = URL.createObjectURL(webfile);
+    // csslink.href = './designs/first.css';
+    // scriptlink.href = './scripts/FirstScript.js';
 
-    weblink.download = "website.html";
-    csslink.download = "first.css";
-    scriptlink.download = "firstscript.js"
+    // weblink.download = "website.html";
+    // csslink.download = "first.css";
+    // scriptlink.download = "firstscript.js"
 
-    weblink.click();
-    csslink.click();
-    scriptlink.click();
-    URL.revokeObjectURL(csslink.href);
-    URL.revokeObjectURL(scriptlink.href);
-    URL.revokeObjectURL(weblink.href);
-
+    // weblink.click();
+    // csslink.click();
+    // scriptlink.click();
+    // URL.revokeObjectURL(csslink.href);
+    // URL.revokeObjectURL(scriptlink.href);
+    // URL.revokeObjectURL(weblink.href);
     var zip = new JSZip();
-    const name = 'first.css'
-    fetch('./public/designs/' + name)
-      .then(res => res.arrayBuffer())
-      .then(ab => {
-        zip.file(name, ab);
-      })
-      const name2 = 'FirstScript.js'
-      fetch('./public/scripts/' + name2)
-        .then(res => res.arrayBuffer())
-        .then(ab => {
-          zip.file(name2, ab);
-        })
+    const folder = zip.folder("Designs")
+    const firstdesign = folder.folder('First Design');
+    const seconddesign = folder.folder('Second Design');
+    const thirddesign = folder.folder('Third Design');
+    // fetch('/backend/output/firstdesign/FirstDesign.css')
+    //   .then(response => response.text())
+    //   .then(text => console.log(text))
+    //   .then(text => firstdesign.file('FirstDesign.css', text))
     zip.generateAsync({type:"blob"})
-    .then(function(content) {
-        saveAs(content, "website.zip");
-    });
+      .then(function(content) {
+          saveAs(content, "Designs.zip");
+      });
     return true;
   }
   //module.exports = generateWebsites;
