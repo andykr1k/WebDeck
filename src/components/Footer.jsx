@@ -49,7 +49,7 @@ export default function Footer() {
                 <ul class="mt-12 flex justify-center gap-6 md:gap-8">
                     <li>
                         <a
-                        href="/"
+                        href="https://www.twitter.com/krik_exe"
                         rel="noreferrer"
                         target="_blank"
                         class="text-lblue transition hover:text-lblue/75"
@@ -72,7 +72,7 @@ export default function Footer() {
 
                     <li>
                         <a
-                        href="/"
+                        href="https://www.twitter.com/krik_exe"
                         rel="noreferrer"
                         target="_blank"
                         class="text-lblue transition hover:text-lblue/75"
@@ -95,7 +95,7 @@ export default function Footer() {
 
                     <li>
                         <a
-                        href="/"
+                        href="https://www.twitter.com/krik_exe"
                         rel="noreferrer"
                         target="_blank"
                         class="text-lblue transition hover:text-lblue/75"
@@ -116,7 +116,7 @@ export default function Footer() {
 
                     <li>
                         <a
-                        href="/"
+                        href="https://github.com/andykr1k"
                         rel="noreferrer"
                         target="_blank"
                         class="text-lblue transition hover:text-lblue/75"
