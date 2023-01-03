@@ -7,9 +7,10 @@ import { generateWebsites } from '../functions/generateWebsites'
 
 export default function InputFormPage() {
 
-    const [Fname, setFname] = useState("");
-    const [Lname, setLname] = useState("");
+    const [name, setName] = useState("");
+    const [bio, setBio] = useState("");
     const [email, setEmail] = useState("");
+    const [number, setNumber] = useState("");
     const [college, setCollege] = useState("");
     const [major, setMajor] = useState("");
     const [currentAttend, setCurrentAttend] = useState("");
@@ -22,12 +23,13 @@ export default function InputFormPage() {
     <div className='grid min-h-screen place-items-center bg-greenblue'> 
         <div className='fixed bottom-0 left-0 z-10 p-10'>
             <a href='/'>
-                <motion.button whileHover={{scale:1.2}} className='bg-raisin p-4 rounded-md' >
+                <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold' >
                     <ArrowBackIcon color='red.600'/>
+                    Back
                 </motion.button>
             </a>
         </div>   
-        <Tabs isFitted variant='soft-rounded' colorScheme='green'>
+        <Tabs isFitted variant='soft-rounded' colorScheme='whiteAlpha'>
             <div className='absolute top-0 left-0 right-0 z-10'>
             <TabList m='1em'>
                 <Tab>Basic</Tab>
@@ -38,188 +40,116 @@ export default function InputFormPage() {
             </div>
             <TabPanels>
                 <TabPanel>
-                    <div className="lg:grid lg:grid-cols-6">
-                        <main
-                        aria-label="Main"
-                        className="flex items-center justify-center lg:col-span-6"
-                        >
-                        <div className="max-w-xl lg:max-w-3xl">
+                    <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                        <form action="" class="space-y-4">
+                        <div>
+                            <label class="sr-only">Name</label>
+                            <input
+                            onChange={ (e) => setName(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Name"
+                            type="text"
+                            />
+                        </div>
 
-                            <form action="#" className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6 sm:col-span-3">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                First Name
-                                </label>
-
-                                <input
-                                onChange={ (e) => setFname(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-
-                            <div className="col-span-6 sm:col-span-3">
-                                <label
-                                for="LastName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Last Name
-                                </label>
-
-                                <input
-                                onChange={ (e) => setLname(e.target.value) }
-                                type="text"
-                                id="LastName"
-                                name="last_name"
-                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-
-                            <div className="col-span-6">
-                                <label for="Email" className="block text-sm font-medium text-gray-700">
-                                Email
-                                </label>
-
-                                <input
+                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                            <div>
+                            <label class="sr-only">Email</label>
+                            <input
                                 onChange={ (e) => setEmail(e.target.value) }
+                                class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                placeholder="Email address"
                                 type="email"
-                                id="Email"
-                                name="email"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
+                            />
                             </div>
-                            </form>
+
+                            <div>
+                            <label class="sr-only">Phone</label>
+                            <input
+                                onChange={ (e) => setNumber(e.target.value) }
+                                class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                                placeholder="Phone Number"
+                                type="tel"
+                            />
+                            </div>
                         </div>
-                        </main>
+
+                        <div>
+                            <label class="sr-only">Biography</label>
+                            <textarea
+                            onChange={ (e) => setBio(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder='Biography'
+                            rows="8"
+                            ></textarea>
+                        </div>
+                        </form>
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="lg:grid lg:grid-cols-6">
-                        <main
-                        aria-label="Main"
-                        className="flex items-center justify-center lg:col-span-6"
-                        >
-                        <div className="max-w-xl lg:max-w-3xl">
-
-                            <form action="#" className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                College
-                                </label>
-
-                                <input
-                                onChange={ (e) => setCollege(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                What is your major?
-                                </label>
-
-                                <input
-                                onChange={ (e) => setMajor(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Are you attending this college currently? (Yes/No)
-                                </label>
-
-                                <input
-                                onChange={ (e) => setCurrentAttend(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            </form>
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                        <form action="" class="space-y-4">
+                        <div>
+                            <label class="sr-only">University Name</label>
+                            <input
+                            onChange={ (e) => setCollege(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="University Name"
+                            type="text"
+                            />
                         </div>
-                        </main>
+                        <div>
+                            <label class="sr-only">Major</label>
+                            <input
+                            onChange={ (e) => setMajor(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Major"
+                            type="text"
+                            />
+                        </div>
+                        <div>
+                            <label class="sr-only">Current</label>
+                            <input
+                            onChange={ (e) => setCurrentAttend(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Are you currently attending?"
+                            type="text"
+                            />
+                        </div>
+                        </form>
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="lg:grid lg:grid-cols-6">
-                        <main
-                        aria-label="Main"
-                        className="flex items-center justify-center lg:col-span-6"
-                        >
-                        <div className="max-w-xl lg:max-w-3xl">
-
-                            <form action="#" className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Company
-                                </label>
-
-                                <input
-                                onChange={ (e) => setCompany(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Are you currently working here? (Yes/No)
-                                </label>
-
-                                <input
-                                onChange={ (e) => setCurrent(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Description
-                                </label>
-
-                                <Textarea
-                                onChange={ (e) => setDescription(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className="w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            </form>
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                        <form action="" class="space-y-4">
+                        <div>
+                            <label class="sr-only">Company Name</label>
+                            <input
+                            onChange={ (e) => setCompany(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Company Name"
+                            type="text"
+                            />
                         </div>
-                        </main>
+                        <div>
+                            <label class="sr-only">Current</label>
+                            <input
+                            onChange={ (e) => setCurrent(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Are you currently working here?"
+                            type="text"
+                            />
+                        </div>
+                        <div>
+                            <label class="sr-only">Description</label>
+                            <textarea
+                            onChange={ (e) => setDescription(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Work Description"
+                            type="text"
+                            />
+                        </div>
+                        </form>
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -232,33 +162,18 @@ export default function InputFormPage() {
                                 Generate
                                 </motion.button>
                             </div>
-                <div className="lg:grid lg:grid-cols-6">
-                        <main
-                        aria-label="Main"
-                        className="flex items-center justify-center lg:col-span-6"
-                        >
-                        <div className="max-w-xl lg:max-w-3xl">
-
-                            <form action="#" className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6 sm:col-span-6">
-                                <label
-                                for="FirstName"
-                                className="block text-sm font-medium text-gray-700"
-                                >
-                                Linkedin
-                                </label>
-
-                                <input
-                                onChange={ (e) => setLinkedin(e.target.value) }
-                                type="text"
-                                id="FirstName"
-                                name="first_name"
-                                className=" w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                                />
-                            </div>
-                            </form>
+                    <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                        <form action="" class="space-y-4">
+                        <div>
+                            <label class="sr-only">Linkedin</label>
+                            <input
+                            onChange={ (e) => setLinkedin(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Linkedin"
+                            type="text"
+                            />
                         </div>
-                        </main>
+                        </form>
                     </div>
                 </TabPanel>
             </TabPanels>

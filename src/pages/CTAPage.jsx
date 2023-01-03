@@ -16,11 +16,11 @@ export default function CTAPage() {
             <span class="block text-2xl pt-1"> Build your own Website. </span>
           </h1>
 
-          <p class="mx-auto mt-2 max-w-xl sm:text-xl sm:leading-relaxed text-lblue">
+          <p class="mx-auto mt-4 md:mt-8 max-w-xl sm:text-xl sm:leading-relaxed text-lblue">
             Create multiple designs of your own custom portfolio website in less than 10 minutes!
           </p>
 
-          <div class="mt-4 flex flex-wrap justify-center gap-4">
+          <div class="mt-6 md:mt-8  flex flex-wrap justify-center gap-4">
             <a
               class="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-lblue hover:bg-transparent hover:text-lblue focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
               href="/get-started"
