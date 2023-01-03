@@ -9,7 +9,7 @@ export default function CoverPage() {
         <div className='text-6xl md:text-8xl font-extrabold text-lblue'>
           <h1>WebDeck</h1>
         </div>
-        <div className='flex justify-center items-center p-10'>
+        <div className='flex justify-center items-center p-10 mt-10'>
           <div className="mouse"></div>
         </div>
       </div>

@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className='snap-start'>
             <CTAPage />
         </div>
-        <div className='absolute z-10 right-0 bottom-0 p-10'>
+        <div className='absolute z-10 left-0 top-0 p-10'>
         <button className='w-30 h-30' onClick={() => onOpen()}>{<AiOutlineInfoCircle size={28} style={{ fill: '#C0E0DE' }}/>}</button>
         </div>
         <Drawer placement={'bottom'} onClose={onClose} isOpen={isOpen} m={0} size={'lg'}>
