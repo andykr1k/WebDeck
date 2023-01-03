@@ -139,12 +139,12 @@ export default function Footer() {
                 </ul>
 
                 <p class="hidden md:flex mx-auto mt-12 max-w-md align-middle text-center justify-center items-center text-lblue">
-                Made with &nbsp; <AiFillHeart /> &nbsp; using &nbsp; <FaReact /> &nbsp;  <SiTailwindcss /> &nbsp; <SiChakraui /> &nbsp; by &nbsp; <a href="https://www.github.com/andykr1k" className="underline"> Andrew Krikorian </a>
+                Made with &nbsp; <AiFillHeart /> &nbsp; using &nbsp; <FaReact /> &nbsp;  <SiTailwindcss /> &nbsp; <SiChakraui /> &nbsp; by &nbsp; <a href="https://akrik.vercel.app" className="underline"> Andrew Krikorian </a>
                 </p>
                 <p class="flex md:hidden mx-auto mt-12 max-w-md align-middle text-center justify-center items-center text-lblue">
                 Made with &nbsp; <AiFillHeart /> &nbsp; using &nbsp; <FaReact /> &nbsp;  <SiTailwindcss /> &nbsp; <SiChakraui /> &nbsp;
                 </p>
-                <p className="flex md:hidden mx-auto max-w-md align-middle text-center justify-center items-center text-lblue">by &nbsp; <a href="https://www.github.com/andykr1k" className="underline"> Andrew Krikorian </a></p>
+                <p className="flex md:hidden mx-auto max-w-md align-middle text-center justify-center items-center text-lblue">by &nbsp; <a href="https://akrik.vercel.app" className="underline"> Andrew Krikorian </a></p>
             </div>
         </footer>
     )
