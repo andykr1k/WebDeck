@@ -24,8 +24,8 @@ export default function InputFormPage() {
         <div className='fixed bottom-0 left-0 z-10 p-10'>
             <a href='/'>
                 <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold' >
-                    <ArrowBackIcon color='red.600'/>
-                    Back
+                    {/*<ArrowBackIcon color='red.600'/>*/}
+                    Home
                 </motion.button>
             </a>
         </div>   
@@ -35,7 +35,7 @@ export default function InputFormPage() {
                 <Tab>Basic</Tab>
                 <Tab>Education</Tab>
                 <Tab>Work</Tab>
-                <Tab>Socials</Tab>
+                <Tab>Generate</Tab>
             </TabList>
             </div>
             <TabPanels>
@@ -82,6 +82,15 @@ export default function InputFormPage() {
                             placeholder='Biography'
                             rows="8"
                             ></textarea>
+                        </div>
+                        <div>
+                            <label class="sr-only">Linkedin</label>
+                            <input
+                            onChange={ (e) => setLinkedin(e.target.value) }
+                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
+                            placeholder="Linkedin"
+                            type="text"
+                            />
                         </div>
                         </form>
                     </div>
@@ -153,27 +162,46 @@ export default function InputFormPage() {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                <div className="fixed bottom-0 align-middle right-0 p-10">
-                                <motion.button
-                                onClick={() => (generateWebsites(Fname, Lname, email))}
-                                whileHover={{scale:1.2}} 
-                                className='bg-lblue p-4 font-bold rounded-md'
-                                >
-                                Generate
-                                </motion.button>
-                            </div>
-                    <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
-                        <form action="" class="space-y-4">
-                        <div>
-                            <label class="sr-only">Linkedin</label>
-                            <input
-                            onChange={ (e) => setLinkedin(e.target.value) }
-                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                            placeholder="Linkedin"
-                            type="text"
-                            />
-                        </div>
-                        </form>
+                    <div className="grid place-items-center p-10">
+                        <motion.button
+                        onClick={() => (generateWebsites("Fname", "Lname", "email"))}
+                        whileHover={{scale:1.2}} 
+                        className='bg-lblue p-4 font-bold rounded-md'
+                        >
+                        Generate
+                        </motion.button>
+                        <motion.a
+                        href="/src/backend/output/firstdesign/FirstDesign.html" 
+                        download="FirstDesign"
+                        whileHover={{scale:1.2}} 
+                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        >
+                        Download First Design
+                        </motion.a>
+                        <motion.a
+                        href="/src/backend/output/seconddesign/SecondDesign.html" 
+                        download="SecondDesign"
+                        whileHover={{scale:1.2}} 
+                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        >
+                        Download Second Design
+                        </motion.a>
+                        <motion.a
+                        href="/src/backend/output/thirddesign/ThirdDesign.html" 
+                        download="ThirdDesign"
+                        whileHover={{scale:1.2}} 
+                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        >
+                        Download Third Design
+                        </motion.a>
+                        <motion.a
+                        href="/public/designs.zip" 
+                        download="Designs"
+                        whileHover={{scale:1.2}} 
+                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        >
+                        Download ZIP
+                        </motion.a>
                     </div>
                 </TabPanel>
             </TabPanels>
