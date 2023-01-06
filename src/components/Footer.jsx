@@ -21,7 +21,7 @@ export default function Footer() {
                         </li>
 
                         <li>
-                        <a class="text-lblue transition hover:text-lblue/75" href="/tech">
+                        <a class="text-lblue transition hover:text-lblue/75" href="/stack">
                             Tech Stack
                         </a>
                         </li>
@@ -33,7 +33,7 @@ export default function Footer() {
                         </li>
 
                         <li>
-                        <a class="text-lblue transition hover:text-lblue/75" href="/privacy">
+                        <a class="text-lblue transition hover:text-lblue/75" href="/policy">
                             Privacy Policy
                         </a>
                         </li>
