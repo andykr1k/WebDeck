@@ -9,7 +9,7 @@ export default function CTAPage() {
       >
         <div class="mx-auto max-w-3xl text-center">
           <h1
-            class="text-lblue text-3xl font-extrabold text-transparent sm:text-5xl"
+            class="text-lblue text-3xl font-extrabold sm:text-5xl"
           >
             Feel Connected to your Portfolio.
 
