@@ -7,7 +7,8 @@ import { generateWebsites } from '../functions/generateWebsites'
 
 export default function InputFormPage() {
 
-    const [name, setName] = useState("");
+    const [fname, setFname] = useState("");
+    const [lname, setLname] = useState("");
     const [bio, setBio] = useState("");
     const [email, setEmail] = useState("");
     const [number, setNumber] = useState("");
@@ -15,12 +16,12 @@ export default function InputFormPage() {
     const [major, setMajor] = useState("");
     const [currentAttend, setCurrentAttend] = useState("");
     const [current, setCurrent] = useState("");
-    const [description, setDescription] = useState("");
+    const [role, setRole] = useState("");
     const [linkedin, setLinkedin] = useState("");
     const [company, setCompany ] = useState("");
 
     return (
-    <div className='grid place-content-center min-h-screen bg-greenblue'> 
+    <div className='flex justify-center items-center min-h-screen bg-greenblue'> 
         <div className='fixed bottom-0 left-0 z-10 p-10'>
             <a href='/'>
                 <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold' >
@@ -39,64 +40,40 @@ export default function InputFormPage() {
             </TabList>
             </div>
             <TabPanels>
-                <TabPanel>
-                    <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
-                        <form action="" class="space-y-4">
-                        <div>
-                            <label class="sr-only">Name</label>
-                            <input
-                            onChange={ (e) => setName(e.target.value) }
-                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                            placeholder="Name"
-                            type="text"
-                            />
-                        </div>
-
-                        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                            <div>
-                            <label class="sr-only">Email</label>
-                            <input
-                                onChange={ (e) => setEmail(e.target.value) }
-                                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                                placeholder="Email address"
-                                type="email"
-                            />
-                            </div>
-
-                            <div>
-                            <label class="sr-only">Phone</label>
-                            <input
-                                onChange={ (e) => setNumber(e.target.value) }
-                                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                                placeholder="Phone Number"
-                                type="tel"
-                            />
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="sr-only">Biography</label>
-                            <textarea
-                            onChange={ (e) => setBio(e.target.value) }
-                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                            placeholder='Biography'
-                            rows="8"
-                            ></textarea>
-                        </div>
-                        <div>
-                            <label class="sr-only">Linkedin</label>
-                            <input
-                            onChange={ (e) => setLinkedin(e.target.value) }
-                            class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                            placeholder="Linkedin"
-                            type="text"
-                            />
-                        </div>
-                        </form>
+                <TabPanel>  
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"             onChange={ (e) => setFname(e.target.value) } placeholder=" " required />
+                        <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
                     </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" onChange={ (e) => setLname(e.target.value) } placeholder=" " required />
+                        <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+                    </div>
+                </div>
+                <div class="relative z-0 w-full mb-6 group">
+                    <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " onChange={ (e) => setEmail(e.target.value) } required />
+                    <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+                </div>
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " onChange={ (e) => setNumber(e.target.value) } required />
+                        <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number</label>
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                        </select>
+                    </div>
+                </div>
+                </div>
                 </TabPanel>
                 <TabPanel>
-                <form>
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
                     <div class="relative z-0 w-full mb-6 group">
                         <input 
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
@@ -105,8 +82,8 @@ export default function InputFormPage() {
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        University Name
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        College (Ex. UCLA)
                         </label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
@@ -117,8 +94,8 @@ export default function InputFormPage() {
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        Major
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Major (Ex. Business)
                         </label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
@@ -129,14 +106,14 @@ export default function InputFormPage() {
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        Are you currently attending?
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Currently attending?
                         </label>
                     </div>
-                </form>
+                </div>
                 </TabPanel>
                 <TabPanel>
-                <form>
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
                     <div class="relative z-0 w-full mb-6 group">
                         <input 
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
@@ -145,20 +122,20 @@ export default function InputFormPage() {
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        Work Name
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Company (Ex. Google)
                         </label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
                         <input 
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
                         placeholder=" "
-                        onChange={ (e) => setDescription(e.target.value) }
+                        onChange={ (e) => setRole(e.target.value) }
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        Description
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Position (Ex. Recruiter)
                         </label>
                     </div>
                     <div class="relative z-0 w-full mb-6 group">
@@ -170,18 +147,18 @@ export default function InputFormPage() {
                         required 
                         />
                         <label 
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
-                        Are you currently attending?
+                        class="peer-focus:font-medium absolute text-sm text-raisin/50 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                        Currently attending?
                         </label>
                     </div>
-                </form>
+                </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="grid place-items-center p-10">
+                    <div className="">
                         <motion.button
                         onClick={() => (generateWebsites("Fname", "Lname", "email"))}
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md'
                         >
                         Generate
                         </motion.button>
