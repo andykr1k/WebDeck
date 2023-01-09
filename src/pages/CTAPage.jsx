@@ -1,6 +1,4 @@
-
 export default function CTAPage() {
-
   return (
     <div className='grid place-items-center h-screen w-screen bg-raisin'>
     <section class="text-white">
@@ -27,13 +25,6 @@ export default function CTAPage() {
             >
               Get Started
             </a>
-{/*  <a
-              class="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-lblue hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-              href="/about"
-            >
-              Learn More
-            </a>*/}
-           
           </div>
         </div>
       </div>

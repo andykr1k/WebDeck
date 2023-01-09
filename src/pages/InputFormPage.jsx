@@ -22,16 +22,16 @@ export default function InputFormPage() {
 
     return (
     <div className='flex justify-center items-center min-h-screen bg-greenblue'> 
-        <div className='fixed bottom-0 left-0 z-10 p-10'>
+        <div className='fixed bottom-0 left-0 z-10 p-10 '>
             <a href='/'>
-                <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold' >
+                <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold shadow-raisin shadow-md' >
                     {/*<ArrowBackIcon color='red.600'/>*/}
                     Home
                 </motion.button>
             </a>
         </div>   
         <Tabs isFitted variant='soft-rounded' colorScheme='whiteAlpha'>
-            <div className='absolute top-0 left-0 right-0 z-10'>
+            <div className='absolute top-0 left-0 right-0 z-10 shadow-lg'>
             <TabList m='1em'>
                 <Tab>Basic</Tab>
                 <Tab>Education</Tab>
@@ -41,7 +41,7 @@ export default function InputFormPage() {
             </div>
             <TabPanels>
                 <TabPanel>  
-                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-6 group">
                         <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"             onChange={ (e) => setFname(e.target.value) } placeholder=" " required />
@@ -73,7 +73,7 @@ export default function InputFormPage() {
                 </div>
                 </TabPanel>
                 <TabPanel>
-                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                     <div class="relative z-0 w-full mb-6 group">
                         <input 
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
@@ -113,7 +113,7 @@ export default function InputFormPage() {
                 </div>
                 </TabPanel>
                 <TabPanel>
-                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12">
+                <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                     <div class="relative z-0 w-full mb-6 group">
                         <input 
                         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" 
