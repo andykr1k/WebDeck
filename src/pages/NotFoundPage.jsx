@@ -6,7 +6,7 @@ import { ArrowBackIcon } from '@chakra-ui/icons'
 export default function NotFoundPage() {
 
   return (
-    <div class="grid h-screen px-4 bg-white place-content-center bg-raisin">
+    <div class="grid h-screen px-4 place-content-center bg-raisin">
   <div class="text-center">
     <h1 class="font-black text-lblue text-9xl">404</h1>
 
