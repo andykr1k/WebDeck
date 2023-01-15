@@ -7,7 +7,7 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 export default function HomePage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <div className="snap-y snap-mandatory h-100vh w-100vw h-screen w-screen overflow-y-scroll snap-always scrollbar-hide">
+    <div className="snap-y snap-mandatory h-100vh w-100vw h-screen w-screen overflow-y-scroll snap-always scrollbar-hide scroll-smooth">
         <div className='snap-start'>
             <CoverPage />
         </div>
