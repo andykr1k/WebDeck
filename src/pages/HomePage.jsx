@@ -15,7 +15,7 @@ export default function HomePage() {
             <CTAPage />
         </div>
         <div className='absolute z-10 left-0 top-0 p-10'>
-        <button className='w-30 h-30' onClick={() => onOpen()}>{<AiOutlineInfoCircle size={28} style={{ fill: '#C0E0DE' }}/>}</button>
+        <button className='w-30 h-30' aria-label="close" onClick={() => onOpen()}>{<AiOutlineInfoCircle size={28} style={{ fill: '#C0E0DE' }}/>}</button>
         </div>
         <Drawer placement={'bottom'} onClose={onClose} isOpen={isOpen} m={0} size={'lg'}>
             <DrawerOverlay className='bg-raisin' />

@@ -14,6 +14,9 @@
 ### Unit Testing
 [![CI](https://github.com/andykr1k/WebDeck/actions/workflows/main.yml/badge.svg)](https://github.com/andykr1k/WebDeck/actions/workflows/main.yml)
 
+### Netlify Build Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/264af23f-f783-4f72-ac85-51382c37a0f1/deploy-status)](https://app.netlify.com/sites/webdecks/deploys)
+
 ## Screenshots
 
 ## Usage
