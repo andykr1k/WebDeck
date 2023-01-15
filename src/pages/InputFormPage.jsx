@@ -41,9 +41,6 @@ export default function InputFormPage() {
             </div>
             <TabPanels>
                 <TabPanel>
-                <div class="rounded-lg bg-white p-4 lg:col-span-3 shadow-raisin shadow-md mb-2 text-center">
-                    <h1 className='font-bold text-2xl'> Basic Information</h1>
-                </div>
                 <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-6 group">
@@ -76,9 +73,6 @@ export default function InputFormPage() {
                 </div>
                 </TabPanel>
                 <TabPanel>
-                <div class="rounded-lg bg-white p-4 lg:col-span-3 shadow-raisin shadow-md mb-2 text-center">
-                    <h1 className='font-bold text-2xl'> Education</h1>
-                </div>
                 <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                     <div class="relative z-0 w-full mb-6 group">
                         <input
@@ -119,9 +113,6 @@ export default function InputFormPage() {
                 </div>
                 </TabPanel>
                 <TabPanel>
-                <div class="rounded-lg bg-white p-4 lg:col-span-3 shadow-raisin shadow-md mb-2 text-center">
-                    <h1 className='font-bold text-2xl'> Career </h1>
-                </div>
                 <div class="rounded-lg bg-white p-8 lg:col-span-3 lg:p-12 shadow-raisin shadow-md">
                     <div class="relative z-0 w-full mb-6 group">
                         <input

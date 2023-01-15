@@ -1,21 +1,36 @@
 import {motion} from 'framer-motion'
+import logo from '../assets/logo.png'
+import { useDisclosure } from '@chakra-ui/react'
+import { Footer } from '../components/index'
+import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay,DrawerContent, DrawerCloseButton} from '@chakra-ui/react'
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
 export default function AboutPage() {
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <div className='min-h-screen text-lblue bg-greenblue p-3 space-y-4'>
-      <div className="bg-raisin/25 rounded-md p-3 text-center top-0 ">
-        <h2 className="text-3xl font-semibold">About Us</h2>
-      </div>
-      <div className="bg-raisin/25 rounded-md text-center">
-        <h3 className="p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
-      </div>
-      <div className='fixed bottom-0 left-0 z-10 p-10 '>
-            <a href='/'>
-                <motion.button whileHover={{scale:1.2}} className='bg-raisin/25 p-4 rounded-md font-bold shadow-raisin shadow-sm' >
-                    Home
-                </motion.button>
-            </a>
+    <div className="bg-gray-200 min-h-screen flex flex-col items-center justify-center">
+      <div className='absolute z-10 left-0 top-0 p-10'>
+        <button className='w-30 h-30' aria-label="close" onClick={() => onOpen()}>{<AiOutlineInfoCircle size={28} style={{ fill: '#6f5f52' }}/>}</button>
         </div>
+        <Drawer placement={'bottom'} onClose={onClose} isOpen={isOpen} m={0} size={'lg'}>
+            <DrawerOverlay className='bg-raisin' />
+            <DrawerContent>
+            <DrawerCloseButton color={'#C0E0DE'}/>
+                <Footer/>
+            </DrawerContent>
+          </Drawer>
+      <div className="w-full max-w-3xl p-6">
+        <h1 className="text-3xl font-medium text-center mb-4 text-gray-800">About Webdeck</h1>
+        <p className="text-lg leading-relaxed mb-4 text-center">
+          <span className="text-blue-600 font-medium">Webdeck</span> is a website dedicated to showcasing the latest and greatest in web development. We feature a wide range of tutorials, articles, and resources to help developers improve their skills and stay up-to-date with the latest trends and technologies.
+        </p>
+        <p className="text-lg leading-relaxed text-center">
+          Our team of experienced developers and designers work hard to create high-quality content that is both informative and easy to understand. We believe that everyone should have access to the tools and knowledge they need to create amazing websites and web applications.
+        </p>
+        <div className="flex justify-center my-4">
+          <a href="/" className="px-4 py-2 rounded-lg text-white bg-blue-600 hover:bg-blue-700">Visit our Website</a>
+        </div>
+      </div>
     </div>
   )
 }
