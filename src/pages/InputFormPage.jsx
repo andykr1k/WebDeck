@@ -24,7 +24,7 @@ export default function InputFormPage() {
     <div className='flex justify-center items-center min-h-screen bg-greenblue'> 
         <div className='fixed bottom-0 left-0 z-10 p-10 '>
             <a href='/'>
-                <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold shadow-raisin shadow-md' >
+                <motion.button whileHover={{scale:1.2}} className='bg-lblue p-4 rounded-md flex justify-center items-center gap-1 font-bold shadow-raisin shadow-sm' >
                     {/*<ArrowBackIcon color='red.600'/>*/}
                     Home
                 </motion.button>
@@ -154,11 +154,11 @@ export default function InputFormPage() {
                 </div>
                 </TabPanel>
                 <TabPanel>
-                    <div className="">
+                    <div className="grid text-center">
                         <motion.button
                         onClick={() => (generateWebsites("Fname", "Lname", "email"))}
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md shadow-md'
                         >
                         Generate
                         </motion.button>
@@ -166,7 +166,7 @@ export default function InputFormPage() {
                         href="/src/backend/output/firstdesign/FirstDesign.html" 
                         download="FirstDesign"
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md shadow-md'
                         >
                         Download First Design
                         </motion.a>
@@ -174,7 +174,7 @@ export default function InputFormPage() {
                         href="/src/backend/output/seconddesign/SecondDesign.html" 
                         download="SecondDesign"
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md shadow-md'
                         >
                         Download Second Design
                         </motion.a>
@@ -182,7 +182,7 @@ export default function InputFormPage() {
                         href="/src/backend/output/thirddesign/ThirdDesign.html" 
                         download="ThirdDesign"
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md shadow-md'
                         >
                         Download Third Design
                         </motion.a>
@@ -190,7 +190,7 @@ export default function InputFormPage() {
                         href="/public/designs.zip" 
                         download="Designs"
                         whileHover={{scale:1.2}} 
-                        className='bg-lblue p-4 m-1 font-bold rounded-md'
+                        className='bg-lblue p-4 m-1 font-bold rounded-md shadow-md'
                         >
                         Download ZIP
                         </motion.a>
