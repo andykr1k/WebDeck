@@ -1,5 +1,5 @@
 
-export function generateWebsites(firstname, lastname, email) {
+export default function generateWebsites(firstname, lastname, email) {
 
   // if (firstname == "" || lastname == "" ) {
   //   throw 'There is a value missing!';

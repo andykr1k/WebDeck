@@ -1,3 +1,3 @@
-export function clean() {
+export default function clean() {
 
 }
