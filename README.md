@@ -1,3 +1,5 @@
+<img src="https://github.com/andykr1k/WebDeck/blob/master/src/assets/logo.png" width="256" height="96">
+
 # WebDeck
 
 WebDeck is a web application that allows you to input your personal information and quickly generate portfolio websites with the data.
