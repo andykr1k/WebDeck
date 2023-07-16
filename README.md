@@ -1,4 +1,4 @@
-<img src="https://github.com/andykr1k/WebDeck/blob/master/src/assets/logo.png" width="256" height="96">
+<img src="https://github.com/andykr1k/WebDeck/blob/master/src/assets/logo.png" width="256" height="128">
 
 # WebDeck
 
