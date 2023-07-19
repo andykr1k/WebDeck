@@ -1,5 +1,10 @@
 # WebDeck
 
+WebDeck is a web application that allows you to input your personal information and quickly generate portfolio websites with the data.
+
+## Team members
+- [Andrew Krikorian](https://github.com/andykr1k) (Fullstack Engineer)
+
 ### Tech Stack
 ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
@@ -17,7 +22,6 @@
 ### Netlify Build Status
 [![Netlify Status](https://api.netlify.com/api/v1/badges/264af23f-f783-4f72-ac85-51382c37a0f1/deploy-status)](https://app.netlify.com/sites/webdecks/deploys)
 
-## Screenshots
 
 ## Usage
 1) Visit webdecks.netlify.app
@@ -30,3 +34,8 @@
 8) Double click on the html file and a browser should appear
 9) Congrats! You have generated and visited your very own portfolio website
 10) Repeat steps 7->9 to open other designs within their respective folders
+
+## Features
+- PC/Mobile/Tablet screen support
+- App can handle multiple live users
+- Generates websites based off inputed information
